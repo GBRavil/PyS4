@@ -1,19 +1,15 @@
 # Даны два файла, в каждом из которых находится запись многочлена. 
 # Задача - сформировать файл, содержащий сумму многочленов.
-import random
+from random import randint
 
 # запись в файл
 def write_file(name, st):
     with open(name, 'w') as data:
         data.write(st)
 
-# создание случайного числа от 0 до 100
-def rnd():
-     return random.randint(0, 101)
-
 # создание коэффициентов многочлена
 def create_mn(k):
-    lst = [rnd() for i in range(k+1)]
+    lst = [randint(0, 101) for i in range(k+1)]
     return lst    
 
 # создание многочлена в виде строки
