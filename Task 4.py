@@ -15,7 +15,7 @@ def create_str(koef):
         for i in range(len(lst)):
             if i != len(lst) - 1 and lst[i] != 0 and i != len(lst) - 2:
                 wr += f'{lst[i]}x^{len(lst)-i-1}'
-                if lst[i+1] != 0:
+                if i < len(lst):
                     wr += ' + '
             elif i == len(lst) - 2 and lst[i] != 0:
                 wr += f'{lst[i]}x'
